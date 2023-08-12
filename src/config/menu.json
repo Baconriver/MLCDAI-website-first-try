@@ -9,8 +9,16 @@
       "url": "/about"
     },
     {
-      "name": "Elements",
-      "url": "/elements"
+      "name": "Projects",
+      "url": "/projects"
+    },
+    {
+      "name": "People",
+      "url": "/people"
+    },
+    {
+      "name": "Blog",
+      "url": "/blog"
     },
     {
       "name": "Pages",
@@ -22,20 +30,16 @@
           "url": "/contact"
         },
         {
-          "name": "Blog",
-          "url": "/blog"
-        },
-        {
-          "name": "Authors",
-          "url": "/authors"
-        },
-        {
           "name": "Categories",
           "url": "/categories"
         },
         {
           "name": "Search",
           "url": "/search"
+        },
+        {
+          "name": "Elements",
+          "url": "/elements"
         },
         {
           "name": "404 Page",

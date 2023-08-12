@@ -1,13 +1,13 @@
-import AuthorCard from "@/components/AuthorCard";
+import ProjectCard from "@/components/ProjectCard";
 import { getListPage, getSinglePage } from "@/lib/contentParser";
 import PageHeader from "@/partials/PageHeader";
 import SeoMeta from "@/partials/SeoMeta";
-import { Author } from "@/types";
+import { Project } from "@/types";
 
-const Authors = () => {
-  const authorIndex: Author = getListPage("authors/_index.md");
-  const authors: Author[] = getSinglePage("authors");
-  const { title, meta_title, description, image } = authorIndex.frontmatter;
+const Projects = () => {
+  const projectsIndex: Project = getListPage("projects/_index.md");
+  const projects: Project[] = getSinglePage("projects");
+  const { title, meta_title, description, image } = projectsIndex.frontmatter;
   return (
     <>
       <SeoMeta
@@ -20,9 +20,9 @@ const Authors = () => {
       <section className="section-sm pb-0">
         <div className="container">
           <div className="row justify-center">
-            {authors.map((author: Author, index: number) => (
+            {projects.map((project: Project, index: number) => (
               <div className="mb-14 md:col-6 lg:col-4" key={index}>
-                <AuthorCard data={author} />
+                <ProjectCard data={project} />
               </div>
             ))}
           </div>
@@ -32,4 +32,4 @@ const Authors = () => {
   );
 };
 
-export default Authors;
+export default Projects;

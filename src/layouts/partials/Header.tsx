@@ -81,7 +81,7 @@ const Header = () => {
               {menu.hasChildren ? (
                 <li className="nav-item nav-dropdown group relative">
                   <span
-                    className={`nav-link inline-flex items-center ${
+                    className={`nav-link inline-flex items-center cursor-pointer ${
                       menu.children?.map(({ url }) => url).includes(pathname) ||
                       menu.children
                         ?.map(({ url }) => `${url}/`)
@@ -113,7 +113,7 @@ const Header = () => {
                   </ul>
                 </li>
               ) : (
-                <li className="nav-item">
+                <li className="nav-item group relative">
                   <Link
                     href={menu.url}
                     className={`nav-link block ${
@@ -123,6 +123,7 @@ const Header = () => {
                   >
                     {menu.name}
                   </Link>
+                  <span className="absolute -bottom-1 left-0 w-0 lg:h-0.5 transition-all bg-primary dark:bg-white group-hover:w-full"></span>
                 </li>
               )}
             </React.Fragment>
@@ -149,14 +150,14 @@ const Header = () => {
             </Link>
           )}
           <ThemeSwitcher className="mr-5" />
-          {navigation_button.enable && (
+          {/* {navigation_button.enable && (
             <Link
               className="btn btn-outline-primary btn-sm hidden lg:inline-block"
               href={navigation_button.link}
             >
               {navigation_button.label}
             </Link>
-          )}
+          )} */}
         </div>
       </nav>
     </header>

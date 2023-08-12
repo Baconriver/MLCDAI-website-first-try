@@ -25,7 +25,7 @@ const BlogCard = ({ data }: { data: Post }) => {
       </h4>
       <ul className="mb-4">
         <li className="mr-4 inline-block">
-          <a href={`/authors/${slugify(author)}`}>
+          <a href={`/people/${slugify(author)}`}>
             <FaRegUserCircle className={"-mt-1 mr-2 inline-block"} />
             {humanize(author)}
           </a>

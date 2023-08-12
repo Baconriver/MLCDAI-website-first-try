@@ -45,6 +45,24 @@ export type Author = {
   slug?: string;
 };
 
+export type Project = {
+  frontmatter: {
+    title: string;
+    image?: string;
+    description?: string;
+    meta_title?: string;
+    social: [
+      {
+        name: string;
+        icon: string;
+        link: string;
+      },
+    ];
+  };
+  content?: string;
+  slug?: string;
+};
+
 export type Feature = {
   button: button;
   image: string;
